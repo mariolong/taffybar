@@ -27,8 +27,8 @@ flag network-uri
 library
   default-language: Haskell2010
   build-depends: base > 3 && < 5,
-                 time >= 1.4 && < 1.7,
-                 time-locale-compat >= 0.1 && < 0.2,
+                 time >= 1.4,
+                 time-locale-compat >= 0.1,
                  old-locale,
                  containers,
                  text,

@@ -27,6 +27,7 @@ user-message: ! 'Warning (added by new or init): Some packages were found to be 
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
 resolver: lts-9.21
+# resolver: lts-12.9
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -52,6 +53,10 @@ packages:
 # (e.g., acme-missiles-0.3)
 extra-deps:
 - gtk-traymanager-0.1.6
+# - time-1.6.0.1
+# - dbus-0.10.15
+- xmonad-0.14.2
+- xmonad-contrib-0.14
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

@@ -1,26 +1,28 @@
 {-# LANGUAGE OverloadedStrings #-}
 --{-# LANGUAGE PackageImports #-}
 
-import Data.IORef (IORef, newIORef, readIORef, writeIORef)
-import Data.Monoid (mconcat)
-import qualified Data.Text as T
+import           Data.IORef                               (IORef, newIORef,
+                                                           readIORef,
+                                                           writeIORef)
+import           Data.Monoid                              (mconcat)
+import qualified Data.Text                                as T
 
-import qualified Graphics.UI.Gtk as Gtk
-import Data.Time.Format
+import           Data.Time.Format                         (TimeLocale (..),
+                                                           defaultTimeLocale)
+import qualified Graphics.UI.Gtk                          as Gtk
+import           System.Information.CPU
+import           System.Information.Memory
+import           System.Information.Network               (getNetInfo)
+import           System.Taffybar
+import           System.Taffybar.FreedesktopNotifications
+import           System.Taffybar.MPRIS2                   (mpris2New)
+import           System.Taffybar.Pager
+import           System.Taffybar.SimpleClock
+import           System.Taffybar.Systray
+import           System.Taffybar.TaffyPager
+import           System.Taffybar.Widgets.PollingGraph
 
-import System.Information.CPU
-import System.Information.Memory
-import System.Information.Network (getNetInfo)
-import System.Taffybar
-import System.Taffybar.FreedesktopNotifications
-import System.Taffybar.MPRIS2 (mpris2New)
-import System.Taffybar.Pager
-import System.Taffybar.SimpleClock
-import System.Taffybar.Systray
-import System.Taffybar.Widgets.PollingGraph
-import System.Taffybar.TaffyPager
-
-import XMonad
+import           XMonad
 
 main :: IO ()
 main = do
