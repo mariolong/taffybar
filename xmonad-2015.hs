@@ -41,8 +41,9 @@ main =
     def
       { workspaces = myWorkspaces
       , modMask = mod4Mask
-      , terminal =
-          "xterm -e 'export SHELL=/usr/bin/fish; export XTERM_SHELL=$SHELL; fish'"
+      , terminal = "st -e fish"
+      -- , terminal =
+          -- "xterm -e 'export SHELL=/usr/bin/fish; export XTERM_SHELL=$SHELL; fish'"
       , focusFollowsMouse = False
       , borderWidth = 2
       , normalBorderColor = "#3d3d3d"
@@ -120,12 +121,10 @@ myKeys =
   , ("M-x M-d", spawnHere "pcmanfm-qt")
   , ("M-x M-t", spawnHere "qbittorrent")
   , ("M-x M-k", spawnHere "kodi")
-  , ( "M-x M-f"
-    , spawnHere
-        "xterm -name mc -e 'export SHELL=/usr/bin/fish;export XTERM_SHELL=$SHELL; mc'")
+  , ("M-x M-f", spawnHere "fish -c 'st -n mc mc'")
   , ("M-c c", spawnHere "emacsclient -ne '(make-capture-frame)'")
-  , ("M-x M-m", spawnHere "st -n ncmpcpp -e ncmpcpp")
-  , ("C-<Esc>", spawnHere "st -n htop -e htop")
+  , ("M-x M-m", spawnHere "st -n ncmpcpp ncmpcpp")
+  , ("C-<Esc>", spawnHere "st -n htop htop")
          -- music player control
   , ("M-m M-m", spawn "mpc toggle")
   , ("M-m M-p", spawn "mpc prev")
