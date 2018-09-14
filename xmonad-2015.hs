@@ -209,7 +209,7 @@ manageApps =
     appFullToAll = ["Oblogout", "slock"]
     appFileManager = ["mc", "pcmanfm-qt"]
     appMedias = ["Kodi", "ncmpcpp", "gwenview"]
-    appTerms = ["xterm", "st-256color"]
+    appTerms = ["xterm", "st"]
 
 -- Written by Marshall Lochbaum on xmonad@haskell.org mailing list
 -- https://markmail.org/message/adewkowzezvqn4wc#query:+page:1+mid:j4fa7fvmm5wg6aze+state:results
