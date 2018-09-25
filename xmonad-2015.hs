@@ -1,3 +1,13 @@
+{-
+
+TODO: default window size
+doRectFloat :: RationalRect -> ManageHook
+
+TODO: float-window position  on screen left, top, right, bottom, center?
+
+-}
+
+
 module Main where
 
 import           XMonad
@@ -204,7 +214,7 @@ manageApps =
     doFloatToAll = doFloat <+> doF copyToAll
     doFullToAll = doFullFloat <+> doF copyToAll
     doShiftAndGo ws = doF (W.greedyView ws) <+> doShift ws -- open on workspace ws then switch to ws
-    appFloats = ["SpeedCrunch"]
+    appFloats = ["SpeedCrunch", "Gpick"]
     appFloatToAll = ["mpv", "Mplayer"]
     appFullToAll = ["Oblogout", "slock"]
     appFileManager = ["mc", "pcmanfm-qt"]
